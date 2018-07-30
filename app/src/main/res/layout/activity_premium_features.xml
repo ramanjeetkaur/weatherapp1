@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="lambtoncollege.com.weatherapp.PremiumFeatures">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/border_rec"
+        android:padding="1dp"
+        android:elevation="5dp"
+        android:gravity="center_vertical">
+
+
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_menu_camera"
+                />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click Picture to Check weather"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:fontFamily="serif"/>
+
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/tempContainter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tempText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/max"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="0\u00b0"
+                android:gravity="center"
+                android:textSize="50sp" />
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:id="@+id/max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0\u00b0"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/min"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0\u00b0"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text=""
+                android:layout_marginTop="20dp"
+                android:gravity="center"/>
+
+
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/border_rec"
+        >
+
+        <LinearLayout
+            android:id="@+id/checkWeekLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show weekly weather log"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="serif"/>
+
+
+
+        <ImageView
+            android:id="@+id/weeklogIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_arrow_downward_black_24dp"
+           />
+            <ProgressBar
+                android:id="@+id/weeklogProgress"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:visibility="gone"
+                android:layout_marginRight="3dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weekLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:background="@drawable/border_rec">
+
+
+                <TextView
+                    android:id="@+id/day1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monday"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:id="@+id/day1Temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif" />
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_rec">
+
+
+                <TextView
+                    android:id="@+id/day2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tuesday"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:id="@+id/day2Temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif" />
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_rec">
+
+
+                <TextView
+                    android:id="@+id/day3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wednesday"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:id="@+id/day3Temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif" />
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_rec">
+
+
+                <TextView
+                    android:id="@+id/day4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thursday"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:id="@+id/day4Temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif" />
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_rec">
+
+
+                <TextView
+                    android:id="@+id/day5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Friday"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:id="@+id/day5Temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif" />
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_rec">
+
+
+                <TextView
+                    android:id="@+id/day6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saturday"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:id="@+id/day6Temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif" />
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:background="@drawable/border_rec">
+
+
+                <TextView
+                    android:id="@+id/day7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sunday"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:id="@+id/day7Temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23"
+                    android:textSize="12sp"
+                    android:textColor="#111"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif" />
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/detect"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/border_rec"
+        >
+
+        <TextView
+            android:id="@+id/myLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My location"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="serif"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="-6.5dp"
+                android:src="@drawable/test" />
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:background="@color/colorAccent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Detect"
+                android:textColor="#fff"/>
+        </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/detectProgress"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/highlights"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/border_rec"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Highlights"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="serif"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/arrow_right"
+            />
+    </LinearLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lambtoncollege.com.weatherapp.ProfileActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/profilePicture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/profile"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <EditText
+            android:id="@+id/firstName"
+            android:hint="First Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <EditText
+            android:id="@+id/lastName"
+            android:hint="Last Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/save"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Save"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:textColor="#ffffff"/>
+</LinearLayout>
